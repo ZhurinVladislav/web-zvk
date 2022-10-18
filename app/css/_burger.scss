@@ -1,0 +1,19 @@
+.burger {
+  display: none;
+  flex-direction: column;
+  margin-right: auto;
+  width: 30px;
+  height: 30px;
+
+  &__item {
+    position: relative;
+    display: block;
+    z-index: 1000;
+    width: 30px;
+    height: 3px;
+    background-color: $colorWhite;
+    transition: 0.2s;
+  }:not(:first-child) {
+    margin: 6px auto;
+  }
+}

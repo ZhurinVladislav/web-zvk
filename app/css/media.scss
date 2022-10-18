@@ -1,0 +1,47 @@
+@media (max-width: 1214px) {
+
+}
+
+@media (max-width: 1024px) {
+  .header {
+    &__main-list {
+      display: none;
+    }
+  }
+  
+  .burger {
+    display: block;
+  }
+}
+
+@media (max-width: 718px) {
+
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+  
+  .header {
+    &__list-svg-item:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &__svg {
+    display: none;
+    }
+  }
+
+  // .section-hero {
+  //   &__heading {
+  //     font-size: 50px;
+  //   }
+  
+  //   &__text {
+  //     font-size: 26px;
+  //   }
+  // }
+
+}

@@ -1,0 +1,112 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.top-wrapper {
+  position: relative;
+  // background-color: $colorGray;
+  // background: linear-gradient(114.49deg, #7E84A3 0.55%, #7E84A2 122.23%);
+  z-index: 0;
+
+  &__background {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    z-index: -100;
+    padding-right: 30px;
+    padding-left: 30px;
+    width: 1700px;
+    height: 100%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    background: linear-gradient(114.49deg, #7E84A3 0.55%, #7E84A2 122.23%);
+    border-radius: 0px 0px 25px 25px;
+  }
+}
+
+.section-hero {
+  padding-top: 165px;
+  padding-bottom: 193px;
+
+    &__container {
+      padding-left: 256px;
+    }
+
+    &__obj {
+      position: absolute;
+      top: -119px;
+      right: 0;
+      z-index: -2;
+    }
+    
+    &__heading-official {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    width: 1px;
+    height: 1px;
+    // overflow: hidden;
+  }
+
+  &__block-title {
+    max-width: max-content;
+  }
+
+  &__transfer{
+    display: block;
+  }
+
+  &__heading {
+    @include textReset; 
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 69px;
+    color: $colorWhite;
+  }
+
+  &__text {
+    @include textReset;
+    margin-left: auto;
+    margin-bottom: 134px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    color: $colorWhite;
+  }
+
+  &__button {
+    padding: 12px 50px;
+    max-width: 259px;
+    min-height: 44px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: $colorDark;
+    border: solid 1px transparent;
+    border-radius: 25px;
+    background-color: $colorWhite;
+    transition: border-color .3s ease-in-out, background-color .3s ease-in-out, color .3s ease-in-out;
+  }
+
+  &__list-item-link:focus:not(:active) {
+    // background-color: rgba(172, 0, 145, 0.50);
+    // color: $colorPurpleLight;
+    outline: none;
+  }
+
+  &__button:focus {
+    background-color: rgba(172, 0, 145, 0.50);
+    color: $colorPurpleLight;
+    outline: none;
+  }
+
+  &__button:hover {
+    border-color: transparent;
+    background-color: rgba(172, 0, 145, 0.30);
+  }
+
+  &__button:active {
+    color: $colorPurpleLight;
+  }
+}

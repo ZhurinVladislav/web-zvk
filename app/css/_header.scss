@@ -1,0 +1,209 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.header {
+  // position: absolute;
+  // left: 50%;
+  // transform: translateX(-50%);
+  
+  &__container {
+    position: relative;
+    z-index: 2;
+    padding-top: 24px;
+    padding-right: 53px;
+    padding-bottom: 24px;
+    padding-left: 256px;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 25px 25px;
+  }
+
+  &__main-list {
+    display: flex;
+    max-width: 792px;
+  }
+
+  &__list {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    @include clearListStyles;
+  }
+
+  &__list-item:not(:last-child) {
+    margin-right: 95px;
+  }
+
+  &__list-item:last-child {
+    margin-right: 190px;
+  }
+
+  &__list-item-link {
+    position: relative;
+    // justify-content: space-between;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: $colorWhite;
+    transition: color .2s ease-in-out, background-color .3s ease-in-out;
+    @include hoverLink;
+    @include focusLink;
+  }
+
+  &__list-item-link:focus:not(:active)::after {
+    -webkit-transform: translate(-50%, -50%) scaleX(1);
+    -ms-transform: translate(-50%, -50%) scaleX(1);
+    transform: translate(-50%, -50%) scaleX(1);
+    outline: none;
+  }
+
+  &__list-item-link:focus {
+    outline: none;
+  }
+
+  &__list-item-link:hover::before {
+    opacity: 1;
+    transform: scaleX(-1);
+  }
+
+  &__list-item-link:active {
+    color: $colorPurpleLight;
+  }
+
+  &__logo {
+    // margin-right: 200px;
+    // position: absolute;
+    // right: 350px;
+    // left: 0;
+    // transform: translateX(50%);
+  }
+
+  &__logo-start {
+    transition: fill .2s ease-in-out;
+  }
+
+  &__logo-end {
+    transition: fill .2s ease-in-out;
+  }
+
+  &__logo-svg:hover &__logo-start {
+    fill: $colorWhite;
+  }
+
+  &__logo-svg:hover &__logo-end {
+    fill: $colorPurpleLight;
+  }
+
+  &__logo-svg:focus {
+    outline: none;
+  }
+
+  &__logo-item {
+    position: relative;
+  }
+
+  &__logo-item:focus {
+    outline: none;
+  }
+  
+  &__logo-item:focus &__logo-start {
+    fill: $colorPurpleLight;
+  }
+
+  &__logo-item:focus &__logo-end {
+    fill: $colorPurpleLight;
+  }
+
+  &__list-svg {
+    @include clearListStyles;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  &__svg-mob {
+    display: none;
+  }
+
+  &__list-svg-item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__btn {
+    @include clearButtonStyles;
+  }
+
+  &__popup {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: -100%;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: $colorDark;
+    transition: all 0.3s ease-in-out;
+  }.open {
+    left: 0;
+  }
+
+  &__popup-button {
+    display: none;
+    padding: 12px 50px;
+    max-width: 259px;
+    min-height: 44px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: $colorPurple;
+    border: solid 1px $colorPurpleМedium;
+    background-color: rgba(172, 0, 145, 0.11);
+    transition: opacity .3s ease-in-out;
+  }.open &__popup-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    
+  }
+
+  &__popup &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  &__popup &__list > &__list-item > &__list-item-link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__popup &__list > &__list-item > &__list-item-link::before {
+    opacity: 0;
+  }
+
+  &__popup &__list > &__list-item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  &__popup &__list > &__list-item::last-child {
+    margin-bottom: 60px;
+  }
+
+  &__burger.active &__item:nth-child(2) {
+    opacity: 0;
+  }
+
+  &__burger.active &__item:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  &__burger.active &__item:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}

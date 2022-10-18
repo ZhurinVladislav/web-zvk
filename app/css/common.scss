@@ -1,0 +1,72 @@
+@import '_variables.scss';
+@import 'fonts.scss';
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+      
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+      
+body {
+  font-family: 'UniSans', sans-serif, Arial, Helvetica;
+  // background-color: $colorWhite;
+  background-color: white;
+  width: 100%;
+  max-width: 100%;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+body.noscroll {
+  position: fixed; 
+  overflow-y: scroll;
+}
+
+input {
+  font-family: 'UniSans', sans-serif, Arial, Helvetica;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 50px;
+  max-width: $containerMaxWidth;
+  border-radius: 25px;
+}
+
+.section-offset {
+  // margin-right: 30px;
+  // margin-left: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+// p::selection {
+//   background: $colorPurple;
+//   color: black;
+//   text-shadow: none;
+// }
+
+// p::-moz-selection {
+//   background: $colorPurple;
+//   color: $colorWhite;
+//   text-shadow: none;
+// }

@@ -1,0 +1,20 @@
+@media (max-width: 1024px) {
+  .header__main-list {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+  .header__list-svg-item:not(:last-child) {
+    margin-right: 10px;
+  }
+  .header__svg {
+    display: none;
+  }
+}/*# sourceMappingURL=media.css.map */

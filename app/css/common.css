@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "UniSans";
+  src: local("UniSansLight"), url("../fonts/UniSansLight.woff2") format("woff2"), url("../fonts/UniSansLight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "UniSans";
+  src: local("UniSansBook"), url("../fonts/UniSansBook.woff2") format("woff2"), url("../fonts/UniSansBook.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "UniSans";
+  src: local("UniSansRegular"), url("../fonts/UniSansRegular.woff2") format("woff2"), url("../fonts/UniSansRegular.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "UniSans";
+  src: local("UniSansSemiBold"), url("../fonts/UniSansSemiBold.woff2") format("woff2"), url("../fonts/UniSansSemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "UniSans";
+  src: local("UniSansBold"), url("../fonts/UniSansBold.woff2") format("woff2"), url("../fonts/UniSansBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "UniSans", sans-serif, Arial, Helvetica;
+  background-color: white;
+  width: 100%;
+  max-width: 100%;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+body.noscroll {
+  position: fixed;
+  overflow-y: scroll;
+}
+
+input {
+  font-family: "UniSans", sans-serif, Arial, Helvetica;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 50px;
+  max-width: 1700px;
+  border-radius: 25px;
+}
+
+.section-offset {
+  padding-right: 30px;
+  padding-left: 30px;
+}/*# sourceMappingURL=common.css.map */
