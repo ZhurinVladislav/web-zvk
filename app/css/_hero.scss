@@ -4,6 +4,8 @@
 .top-wrapper {
   position: relative;
   z-index: 0;
+  max-width: 1813px;
+  margin: 0 auto;
 
   &__background {
     position: absolute;
@@ -11,7 +13,7 @@
     left: 50%;
     z-index: -100;
     max-width: 100%;
-    width: 1700px;
+    width: 1813px;
     height: 100%;
     transform: translateX(-50%);
     overflow: hidden;
@@ -24,48 +26,85 @@
 }
 
 .section-hero {
-  position: relative;
-  padding-top: 165px;
-  padding-bottom: 193px;
+  padding-top: 114px;
+  padding-bottom: 158px;
 
     &__container {
       // position: relative;
       padding-left: 256px;
     }
 
-    &__obj-left {
+    &__block-image {
       position: absolute;
-      top: -100px;
-      left: 161px;
-      z-index: -99;
-      max-width: 158px;
+      top: -19.5%;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -2;
+      display: flex;
+      align-items: center;
+      // min-height: 600px;
+      height: 100%;
+    }
+
+    &__obj {
+      position: relative;
+      // flex-shrink: 0;
       width: 100%;
       height: 100%;
-      background-image: url(../img/hero/hero-obj-left.svg);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      transform: translateX(-50%);
-      overflow: hidden;
-      border-radius: 0px 0px 25px 25px;
     }
-  
-  &__obj-right {
-    position: absolute;
-    top: -100px;
-    right: 82px;
-    z-index: -99;
-    // max-width: 100%;
-    max-width: 930px;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-image: url(../img/hero/hero-obj-right.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 0px 0px 25px 25px;
-  }
+
+    
+    &__obj-left {
+      // margin-right: 10px;
+      border-bottom-left-radius: 25px;
+      max-width: 158px;
+      background-image: url(../img/hero/hero-obj-left.svg);
+    }
+
+    &__obj-right {
+      margin-left: auto;
+      border-bottom-right-radius: 25px;
+      max-width: 930px;
+      background-image: url(../img/hero/hero-obj-right.svg);
+    }
+
+    // &__obj-left {
+    //   position: absolute;
+    //   top: -100px;
+    //   left: 161px;
+    //   z-index: -99;
+    //   max-width: 158px;
+    //   width: 100%;
+    //   height: 100%;
+    //   background-image: url(../img/hero/hero-obj-left.svg);
+    //   background-position: center;
+    //   background-repeat: no-repeat;
+    //   background-size: cover;
+    //   transform: translateX(-50%);
+    //   overflow: hidden;
+    //   border-radius: 0px 0px 25px 25px;
+    // }
+
+    // &__obj-right {
+    //   position: absolute;
+    //   top: -100px;
+    //   right: 82px;
+    //   z-index: -99;
+    //   // max-width: 100%;
+    //   max-width: 930px;
+    //   width: 100%;
+    //   height: 100%;
+    //   overflow: hidden;
+    //   background-image: url(../img/hero/hero-obj-right.svg);
+    //   background-position: center;
+    //   background-repeat: no-repeat;
+    //   background-size: cover;
+    //   border-radius: 0px 0px 25px 25px;
+    // }
 
     &__heading-official {
     position: absolute;
@@ -87,10 +126,10 @@
   }
 
   &__heading {
-    @include textReset; 
-    font-weight: 600;
-    font-size: 70px;
-    line-height: 69px;
+    @include titleReset; 
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 46px;
     color: $colorWhite;
   }
 
