@@ -13,6 +13,13 @@
   font-display: swap;
 }
 @font-face {
+  font-family: "Radiotechnika";
+  src: local("Radiotechnika"), url("../fonts/Radiotechnika.woff2") format("woff2"), url("../fonts/Radiotechnika.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: "UniSans";
   src: local("UniSansRegular"), url("../fonts/UniSansRegular.woff2") format("woff2"), url("../fonts/UniSansRegular.woff") format("woff");
   font-weight: 500;
@@ -77,7 +84,7 @@ img {
 .container {
   margin: 0 auto;
   padding: 0 50px;
-  max-width: 1700px;
+  max-width: 1813px;
   border-radius: 25px;
 }
 
@@ -110,10 +117,10 @@ img {
   list-style: none;
 }
 .header__list-item:not(:last-child) {
-  margin-right: 95px;
+  margin-right: 87px;
 }
 .header__list-item:last-child {
-  margin-right: 190px;
+  margin-right: 170px;
 }
 .header__list-item-btn {
   display: none;
@@ -313,6 +320,8 @@ img {
 .top-wrapper {
   position: relative;
   z-index: 0;
+  max-width: 1813px;
+  margin: 0 auto;
 }
 .top-wrapper__background {
   position: absolute;
@@ -320,7 +329,7 @@ img {
   left: 50%;
   z-index: -100;
   max-width: 100%;
-  width: 1700px;
+  width: 1813px;
   height: 100%;
   transform: translateX(-50%);
   overflow: hidden;
@@ -332,43 +341,41 @@ img {
 }
 
 .section-hero {
-  position: relative;
-  padding-top: 165px;
-  padding-bottom: 193px;
+  padding-top: 114px;
+  padding-bottom: 158px;
 }
 .section-hero__container {
   padding-left: 256px;
 }
-.section-hero__obj-left {
+.section-hero__block-image {
   position: absolute;
-  top: -100px;
-  left: 161px;
-  z-index: -99;
-  max-width: 158px;
+  top: -19.5%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.section-hero__obj {
+  position: relative;
   width: 100%;
   height: 100%;
-  background-image: url(../img/hero/hero-obj-left.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  transform: translateX(-50%);
-  overflow: hidden;
-  border-radius: 0px 0px 25px 25px;
+}
+.section-hero__obj-left {
+  border-bottom-left-radius: 25px;
+  max-width: 158px;
+  background-image: url(../img/hero/hero-obj-left.svg);
 }
 .section-hero__obj-right {
-  position: absolute;
-  top: -100px;
-  right: 82px;
-  z-index: -99;
+  margin-left: auto;
+  border-bottom-right-radius: 25px;
   max-width: 930px;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
   background-image: url(../img/hero/hero-obj-right.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 0px 0px 25px 25px;
 }
 .section-hero__heading-official {
   position: absolute;
@@ -388,14 +395,13 @@ img {
   display: block;
 }
 .section-hero__heading {
+  font-family: "Radiotechnika";
   margin: 0;
   padding: 0;
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
-  font-weight: 600;
-  font-size: 70px;
-  line-height: 69px;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 46px;
   color: #FFF;
 }
 .section-hero__text {
@@ -452,6 +458,7 @@ img {
   border-radius: 25px;
 }
 .about__heading {
+  font-family: "Radiotechnika";
   margin: 0;
   padding: 0;
   text-transform: uppercase;
@@ -482,14 +489,6 @@ img {
   color: rgba(34, 34, 34, 0.5);
 }
 
-@media (max-width: 1839px) {
-  .section-hero__obj-left {
-    left: 79px;
-  }
-  .section-hero__obj-right {
-    right: 0px;
-  }
-}
 @media (max-width: 1214px) {
   .header__container {
     padding-right: 0px;
@@ -526,18 +525,24 @@ img {
   .section-hero {
     padding-top: 40px;
   }
+  .section-hero__block-image {
+    top: -23%;
+  }
   .section-hero__obj-right {
     display: none;
   }
 }
 @media (max-width: 718px) {
   .section-hero__heading {
-    font-size: 45px;
-    line-height: 46px;
+    font-size: 26px;
+    line-height: 32px;
   }
   .section-hero__text {
     margin-left: 0;
     font-size: 25px;
+  }
+  .section-hero__block-image {
+    top: -24%;
   }
 }
 @media (max-width: 600px) {
@@ -556,5 +561,10 @@ img {
   }
   .header__svg-mob {
     display: block;
+  }
+}
+@media (max-width: 463px) {
+  .section-hero__block-image {
+    top: -22%;
   }
 }/*# sourceMappingURL=style.css.map */

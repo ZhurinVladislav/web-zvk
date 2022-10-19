@@ -13,6 +13,13 @@
   font-display: swap;
 }
 @font-face {
+  font-family: "Radiotechnika";
+  src: local("Radiotechnika"), url("../fonts/Radiotechnika.woff2") format("woff2"), url("../fonts/Radiotechnika.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: "UniSans";
   src: local("UniSansRegular"), url("../fonts/UniSansRegular.woff2") format("woff2"), url("../fonts/UniSansRegular.woff") format("woff");
   font-weight: 500;
