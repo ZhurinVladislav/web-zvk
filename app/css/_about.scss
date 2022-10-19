@@ -1,0 +1,37 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.about {
+  max-width: 1700px;
+  margin: 0 auto;
+  background-image: url(../img/about/bg-about.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 25px;
+    &__heading {
+      @include titleReset;
+      font-weight: 400;
+      font-size: 37px;
+      line-height: 36px; 
+      color: $colorWhite;
+    }
+}
+
+.content-top {
+  background-color: $colorWhite;
+  border-radius: 0 25px 25px 0;
+  &__text {
+    @include textReset;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 43px;
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 60px;
+    color: rgba(34, 34, 34, 0.5);
+  }
+}

@@ -1,5 +1,31 @@
-@media (max-width: 1214px) {
+@media (max-width: 1839px) {
+  .section-hero {
+    &__obj-left {
+      left: 79px;
+    }
 
+    &__obj-right {
+      right: 0px;
+    }
+  }
+}
+
+@media (max-width: 1214px) {
+  .header {
+    &__container {
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+
+    &__list-item:not(:last-child) {
+      margin-right: 35px;
+    }
+  
+  }
+  .container {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -7,15 +33,52 @@
     &__main-list {
       display: none;
     }
+
+    &__list-item:last-child {
+      margin-right: 0;
+    }
+
+    &__list-item-btn {
+      display: flex;
+    }
+    
+    &__logo {
+      margin: 0 auto;
+    }
+
+    &__list-svg {
+      margin-left: 0;
+    }
   }
   
   .burger {
     display: block;
+    margin: auto 0;
   }
+
+  .section-hero {
+    padding-top: 40px;
+
+    &__obj-right {
+      display: none;
+    }
+  }
+
 }
 
 @media (max-width: 718px) {
+ .section-hero {
 
+    &__heading {
+      font-size: 45px;
+      line-height: 46px;
+    }
+
+    &__text {
+      margin-left: 0;
+      font-size: 25px;
+    }
+  }
 }
 
 @media (max-width: 600px) {
@@ -27,6 +90,10 @@
   .header {
     &__list-svg-item:not(:last-child) {
       margin-right: 10px;
+    }
+
+    &__logo-svg {
+      height: 26px;
     }
 
     &__svg {

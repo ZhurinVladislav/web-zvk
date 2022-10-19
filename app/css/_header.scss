@@ -1,11 +1,7 @@
 @import '_variables.scss';
 @import '_mixin.scss';
 
-.header {
-  // position: absolute;
-  // left: 50%;
-  // transform: translateX(-50%);
-  
+.header {  
   &__container {
     position: relative;
     z-index: 2;
@@ -38,9 +34,12 @@
     margin-right: 190px;
   }
 
+  &__list-item-btn {
+    display: none;
+  }
+
   &__list-item-link {
     position: relative;
-    // justify-content: space-between;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
@@ -71,11 +70,7 @@
   }
 
   &__logo {
-    // margin-right: 200px;
-    // position: absolute;
-    // right: 350px;
-    // left: 0;
-    // transform: translateX(50%);
+    margin-right: 60px;
   }
 
   &__logo-start {
@@ -141,30 +136,39 @@
     display: flex;
     width: 100%;
     height: 100%;
-    background-color: $colorDark;
+    background-color: $colorGrayLight;
+    background-image: url(../img/header/background-image-burger.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     transition: all 0.3s ease-in-out;
   }.open {
     left: 0;
   }
 
   &__popup-button {
-    display: none;
     padding: 12px 50px;
     max-width: 259px;
     min-height: 44px;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    color: $colorPurple;
-    border: solid 1px $colorPurpleМedium;
-    background-color: rgba(172, 0, 145, 0.11);
-    transition: opacity .3s ease-in-out;
+    color: $colorDark;
+    border: solid 1px transparent;
+    border-radius: 25px;
+    background-color: $colorWhite;
+    transition: border-color .3s ease-in-out, background-color .3s ease-in-out, color .3s ease-in-out;
   }.open &__popup-button {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    
+  }
+
+  &__popup-button:active {
+    background-color: transparent;
+    border-color: $colorWhite;
+    color: $colorWhite;
   }
 
   &__popup &__list {
@@ -189,10 +193,6 @@
   &__popup &__list > &__list-item:not(:last-child) {
     margin-right: 0;
     margin-bottom: 40px;
-  }
-
-  &__popup &__list > &__list-item::last-child {
-    margin-bottom: 60px;
   }
 
   &__burger.active &__item:nth-child(2) {

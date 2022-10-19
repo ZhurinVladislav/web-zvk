@@ -115,6 +115,9 @@ img {
 .header__list-item:last-child {
   margin-right: 190px;
 }
+.header__list-item-btn {
+  display: none;
+}
 .header__list-item-link {
   position: relative;
   font-weight: 400;
@@ -162,6 +165,9 @@ img {
 }
 .header__list-item-link:active {
   color: #D64BC0;
+}
+.header__logo {
+  margin-right: 60px;
 }
 .header__logo-start {
   transition: fill 0.2s ease-in-out;
@@ -219,30 +225,39 @@ img {
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background-color: #7E84A3;
+  background-image: url(../img/header/background-image-burger.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   transition: all 0.3s ease-in-out;
 }
 .header .open {
   left: 0;
 }
 .header__popup-button {
-  display: none;
   padding: 12px 50px;
   max-width: 259px;
   min-height: 44px;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
-  color: #AC0091;
-  border: solid 1px #D400B3;
-  background-color: rgba(172, 0, 145, 0.11);
-  transition: opacity 0.3s ease-in-out;
+  color: #000;
+  border: solid 1px transparent;
+  border-radius: 25px;
+  background-color: #FFF;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 .open .header__popup-button {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+}
+.header__popup-button:active {
+  background-color: transparent;
+  border-color: #FFF;
+  color: #FFF;
 }
 .header__popup .header__list {
   display: flex;
@@ -263,9 +278,6 @@ img {
 .header__popup .header__list > .header__list-item:not(:last-child) {
   margin-right: 0;
   margin-bottom: 40px;
-}
-.header__popup .header__list > .header__list-item::last-child {
-  margin-bottom: 60px;
 }
 .header__burger.active .header__item:nth-child(2) {
   opacity: 0;
@@ -291,6 +303,7 @@ img {
   width: 30px;
   height: 3px;
   background-color: #FFF;
+  border-radius: 25px;
   transition: 0.2s;
 }
 .burger :not(:first-child) {
@@ -306,28 +319,56 @@ img {
   top: -100px;
   left: 50%;
   z-index: -100;
-  padding-right: 30px;
-  padding-left: 30px;
+  max-width: 100%;
   width: 1700px;
   height: 100%;
   transform: translateX(-50%);
   overflow: hidden;
-  background: linear-gradient(114.49deg, #7E84A3 0.55%, #7E84A2 122.23%);
+  background-image: url(../img/hero/bg-hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 0px 0px 25px 25px;
 }
 
 .section-hero {
+  position: relative;
   padding-top: 165px;
   padding-bottom: 193px;
 }
 .section-hero__container {
   padding-left: 256px;
 }
-.section-hero__obj {
+.section-hero__obj-left {
   position: absolute;
-  top: -119px;
-  right: 0;
-  z-index: -2;
+  top: -100px;
+  left: 161px;
+  z-index: -99;
+  max-width: 158px;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/hero/hero-obj-left.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateX(-50%);
+  overflow: hidden;
+  border-radius: 0px 0px 25px 25px;
+}
+.section-hero__obj-right {
+  position: absolute;
+  top: -100px;
+  right: 82px;
+  z-index: -99;
+  max-width: 930px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: url(../img/hero/hero-obj-right.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0px 0px 25px 25px;
 }
 .section-hero__heading-official {
   position: absolute;
@@ -384,27 +425,119 @@ img {
   transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 .section-hero__list-item-link:focus:not(:active) {
+  color: #FFF;
   outline: none;
 }
 .section-hero__button:focus {
-  background-color: rgba(172, 0, 145, 0.5);
-  color: #D64BC0;
+  background-color: transparent;
+  border-color: #FFF;
+  color: #FFF;
   outline: none;
 }
 .section-hero__button:hover {
-  border-color: transparent;
-  background-color: rgba(172, 0, 145, 0.3);
+  border-color: #FFF;
+  background-color: transparent;
 }
 .section-hero__button:active {
-  color: #D64BC0;
+  color: #FFF;
 }
 
+.about {
+  max-width: 1700px;
+  margin: 0 auto;
+  background-image: url(../img/about/bg-about.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 25px;
+}
+.about__heading {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 37px;
+  line-height: 36px;
+  color: #FFF;
+}
+
+.content-top {
+  background-color: #FFF;
+  border-radius: 0 25px 25px 0;
+}
+.content-top__text {
+  margin: 0;
+  padding: 0;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 43px;
+}
+.content-top__link {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 60px;
+  color: rgba(34, 34, 34, 0.5);
+}
+
+@media (max-width: 1839px) {
+  .section-hero__obj-left {
+    left: 79px;
+  }
+  .section-hero__obj-right {
+    right: 0px;
+  }
+}
+@media (max-width: 1214px) {
+  .header__container {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .header__list-item:not(:last-child) {
+    margin-right: 35px;
+  }
+  .container {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
 @media (max-width: 1024px) {
   .header__main-list {
     display: none;
   }
+  .header__list-item:last-child {
+    margin-right: 0;
+  }
+  .header__list-item-btn {
+    display: flex;
+  }
+  .header__logo {
+    margin: 0 auto;
+  }
+  .header__list-svg {
+    margin-left: 0;
+  }
   .burger {
     display: block;
+    margin: auto 0;
+  }
+  .section-hero {
+    padding-top: 40px;
+  }
+  .section-hero__obj-right {
+    display: none;
+  }
+}
+@media (max-width: 718px) {
+  .section-hero__heading {
+    font-size: 45px;
+    line-height: 46px;
+  }
+  .section-hero__text {
+    margin-left: 0;
+    font-size: 25px;
   }
 }
 @media (max-width: 600px) {
@@ -414,6 +547,9 @@ img {
   }
   .header__list-svg-item:not(:last-child) {
     margin-right: 10px;
+  }
+  .header__logo-svg {
+    height: 26px;
   }
   .header__svg {
     display: none;
