@@ -17,18 +17,6 @@
   margin: 0;
   padding: 0;
   text-transform: uppercase;
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-  //   z-index: 2;
-  //   top: 100%;
-  //   bottom: 0;
-  //   right: 0;
-  //   left: 0;
-  //   background-color: $colorWhite;
-  //   width: calc(100%);
-  //   height: 2px;
-  // }
 }
 
 @mixin clearButtonStyles {
@@ -44,15 +32,16 @@
     content: '';
     position: absolute;
     z-index: 2;
-    top: 115%;
+    top: -56%;
     bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: $colorPurpleLight;
-    width: calc(100%);
-    height: 2px;
+    right: -23px;
+    background-color: $colorGrayUltraLight;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
     opacity: 0;
-    transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+    transition-duration: 0.6s;
+    transition-timing-function: cubic-bezier(.65, 1.95, .03, .32);
   }
 }
 
@@ -60,20 +49,17 @@
   &:after {
     content: '';
     position: absolute;
-    z-index: -10;
-    top: 50%;
-    left: 50%;
-    width: calc(100% + 6px);
-    height: calc(100% + 8px);
-    -webkit-transform: translate(-50%, -50%) scaleX(0);
-    -ms-transform: translate(-50%, -50%) scaleX(0);
-    transform: translate(-50%, -50%) scaleX(0);
-    background-color: $colorPurpleLight;
-    -webkit-transition: -webkit-transform 0.3s ease;
-    transition: -webkit-transform 0.3s ease;
-    -o-transition: transform 0.3s ease;
-    transition: transform 0.3s ease;
-    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    z-index: 2;
+    top: -56%;
+    bottom: 0;
+    right: -23px;
+    background-color: $colorGrayUltraLight;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    opacity: 0;
+    transition-duration: 0.6s;
+    transition-timing-function: cubic-bezier(.65, 1.95, .03, .32);
   }
 }
 

@@ -26,6 +26,15 @@
     @include clearListStyles;
   }
 
+  // &__list-item {
+  //   // transition: transform .3s ease-in-out;
+  //   // transition-timing-function: cubic-bezier(.65, 1.95, .03, .32);
+  // }
+
+  // &__list-item:hover {
+  //   transform: translateY(35%);
+  // }
+
   &__list-item:not(:last-child) {
     margin-right: 87px;
   }
@@ -39,21 +48,24 @@
   }
 
   &__list-item-link {
+    @include focusLink;
     position: relative;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
     color: $colorWhite;
-    transition: color .2s ease-in-out, background-color .3s ease-in-out;
     @include hoverLink;
-    @include focusLink;
+    
   }
 
   &__list-item-link:focus:not(:active)::after {
-    -webkit-transform: translate(-50%, -50%) scaleX(1);
-    -ms-transform: translate(-50%, -50%) scaleX(1);
-    transform: translate(-50%, -50%) scaleX(1);
+    opacity: 1;
+    transform: translateY(140%);
     outline: none;
+  }
+
+  &__list-item-link:not(:focus)::after {
+    transition-duration: 0.0000001s;
   }
 
   &__list-item-link:focus {
@@ -62,11 +74,16 @@
 
   &__list-item-link:hover::before {
     opacity: 1;
-    transform: scaleX(-1);
+    transform: translateY(140%);
+  } 
+  
+  &__list-item-link:not(:hover)::before {
+    transition-duration: 0.0000001s;
   }
+  
 
   &__list-item-link:active {
-    color: $colorPurpleLight;
+    color: $colorGrayUltraLight;
   }
 
   &__logo {

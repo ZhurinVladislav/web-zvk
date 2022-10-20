@@ -6,6 +6,7 @@
   z-index: 0;
   max-width: 1813px;
   margin: 0 auto;
+  margin-bottom: 56px;
 
   &__background {
     position: absolute;
@@ -30,7 +31,6 @@
   padding-bottom: 158px;
 
     &__container {
-      // position: relative;
       padding-left: 256px;
     }
 
@@ -72,40 +72,6 @@
       background-image: url(../img/hero/hero-obj-right.svg);
     }
 
-    // &__obj-left {
-    //   position: absolute;
-    //   top: -100px;
-    //   left: 161px;
-    //   z-index: -99;
-    //   max-width: 158px;
-    //   width: 100%;
-    //   height: 100%;
-    //   background-image: url(../img/hero/hero-obj-left.svg);
-    //   background-position: center;
-    //   background-repeat: no-repeat;
-    //   background-size: cover;
-    //   transform: translateX(-50%);
-    //   overflow: hidden;
-    //   border-radius: 0px 0px 25px 25px;
-    // }
-
-    // &__obj-right {
-    //   position: absolute;
-    //   top: -100px;
-    //   right: 82px;
-    //   z-index: -99;
-    //   // max-width: 100%;
-    //   max-width: 930px;
-    //   width: 100%;
-    //   height: 100%;
-    //   overflow: hidden;
-    //   background-image: url(../img/hero/hero-obj-right.svg);
-    //   background-position: center;
-    //   background-repeat: no-repeat;
-    //   background-size: cover;
-    //   border-radius: 0px 0px 25px 25px;
-    // }
-
     &__heading-official {
     position: absolute;
     clip: rect(0, 0, 0, 0);
@@ -115,67 +81,67 @@
     width: 1px;
     height: 1px;
     // overflow: hidden;
-  }
+    }
 
-  &__block-title {
-    max-width: max-content;
-  }
+    &__block-title {
+      max-width: max-content;
+    }
 
-  &__transfer{
-    display: block;
-  }
+    &__transfer{
+      display: block;
+    }
 
-  &__heading {
-    @include titleReset; 
-    font-weight: 300;
-    font-size: 40px;
-    line-height: 46px;
-    color: $colorWhite;
-  }
+    &__heading {
+      @include titleReset; 
+      font-weight: 300;
+      font-size: 40px;
+      line-height: 46px;
+      color: $colorWhite;
+    }
 
-  &__text {
-    @include textReset;
-    margin-left: auto;
-    margin-bottom: 134px;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 38px;
-    color: $colorWhite;
-  }
+    &__text {
+      @include textReset;
+      margin-left: auto;
+      margin-bottom: 134px;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 38px;
+      color: $colorWhite;
+    }
 
-  &__button {
-    padding: 12px 50px;
-    max-width: 259px;
-    min-height: 44px;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    color: $colorDark;
-    border: solid 1px transparent;
-    border-radius: 25px;
-    background-color: $colorWhite;
-    transition: border-color .3s ease-in-out, background-color .3s ease-in-out, color .3s ease-in-out;
-  }
+    &__button {
+      padding: 12px 50px;
+      max-width: 259px;
+      min-height: 44px;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      color: $colorDark;
+      border: solid 1px transparent;
+      border-radius: 25px;
+      background-color: $colorWhite;
+      transition: border-color .3s ease-in-out, background-color .3s ease-in-out, color .3s ease-in-out;
+    }
 
-  &__list-item-link:focus:not(:active) {
-    // background-color: rgba(172, 0, 145, 0.50);
-    color: $colorWhite;
-    outline: none;
-  }
+    &__list-item-link:focus:not(:active) {
+      // background-color: rgba(172, 0, 145, 0.50);
+      color: $colorWhite;
+      outline: none;
+    }
 
-  &__button:focus {
-    background-color: transparent;
-    border-color: $colorWhite;
-    color: $colorWhite;
-    outline: none;
-  }
+    &__button:focus {
+      background-color: transparent;
+      border-color: $colorWhite;
+      color: $colorWhite;
+      outline: none;
+    }
 
-  &__button:hover {
-    border-color: $colorWhite;
-    background-color: transparent;
-  }
+    &__button:hover {
+      border-color: $colorWhite;
+      background-color: transparent;
+    }
 
-  &__button:active {
-    color: $colorWhite;
-  }
+    &__button:active {
+      color: $colorWhite;
+    }
 }

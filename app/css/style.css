@@ -131,47 +131,57 @@ img {
   font-size: 20px;
   line-height: 24px;
   color: #FFF;
-  transition: color 0.2s ease-in-out, background-color 0.3s ease-in-out;
+}
+.header__list-item-link:after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: -56%;
+  bottom: 0;
+  right: -23px;
+  background-color: #D9D9D9;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  opacity: 0;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0.65, 1.95, 0.03, 0.32);
 }
 .header__list-item-link:before {
   content: "";
   position: absolute;
   z-index: 2;
-  top: 115%;
+  top: -56%;
   bottom: 0;
-  right: 0;
-  left: 0;
-  background-color: #D64BC0;
-  width: 100%;
-  height: 2px;
+  right: -23px;
+  background-color: #D9D9D9;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-.header__list-item-link:after {
-  content: "";
-  position: absolute;
-  z-index: -10;
-  top: 50%;
-  left: 50%;
-  width: calc(100% + 6px);
-  height: calc(100% + 8px);
-  transform: translate(-50%, -50%) scaleX(0);
-  background-color: #D64BC0;
-  transition: transform 0.3s ease;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0.65, 1.95, 0.03, 0.32);
 }
 .header__list-item-link:focus:not(:active)::after {
-  transform: translate(-50%, -50%) scaleX(1);
+  opacity: 1;
+  transform: translateY(140%);
   outline: none;
+}
+.header__list-item-link:not(:focus)::after {
+  transition-duration: 0.0000001s;
 }
 .header__list-item-link:focus {
   outline: none;
 }
 .header__list-item-link:hover::before {
   opacity: 1;
-  transform: scaleX(-1);
+  transform: translateY(140%);
+}
+.header__list-item-link:not(:hover)::before {
+  transition-duration: 0.0000001s;
 }
 .header__list-item-link:active {
-  color: #D64BC0;
+  color: #D9D9D9;
 }
 .header__logo {
   margin-right: 60px;
@@ -322,6 +332,7 @@ img {
   z-index: 0;
   max-width: 1813px;
   margin: 0 auto;
+  margin-bottom: 56px;
 }
 .top-wrapper__background {
   position: absolute;
@@ -449,28 +460,79 @@ img {
 }
 
 .about {
-  max-width: 1700px;
+  position: relative;
+  max-width: 1813px;
   margin: 0 auto;
-  background-image: url(../img/about/bg-about.png);
+  margin-bottom: 56px;
+  padding-top: 95px;
+  padding-bottom: 69px;
+  background-image: url(../img/about/bg-about.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 25px;
+}
+.about__container {
+  padding: 0;
 }
 .about__heading {
   font-family: "Radiotechnika";
   margin: 0;
   padding: 0;
   text-transform: uppercase;
+  margin-bottom: 29px;
+  padding-left: 673px;
   font-weight: 400;
   font-size: 37px;
   line-height: 36px;
-  color: #FFF;
+  color: #000;
+}
+.about__image-block {
+  position: absolute;
+  bottom: 51px;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  max-height: 796px;
+  height: 100%;
+}
+.about__image {
+  position: relative;
+  height: auto;
+  max-width: 100%;
+  border-bottom-left-radius: 25px;
 }
 
 .content-top {
+  position: relative;
+  margin-right: 254px;
+  margin-bottom: 46px;
+  padding-top: 21px;
+  padding-right: 30px;
+  padding-bottom: 21px;
+  display: flex;
   background-color: #FFF;
   border-radius: 0 25px 25px 0;
+}
+.content-top__image {
+  position: absolute;
+  top: 16px;
+  left: 324px;
+  background-image: url(../img/about/about-image-top.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 507px;
+  width: 100%;
+  min-height: 202px;
+  height: 100%;
+}
+.content-top__block {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  max-width: 626px;
 }
 .content-top__text {
   margin: 0;
@@ -479,14 +541,125 @@ img {
   max-width: -moz-max-content;
   max-width: max-content;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 27px;
   line-height: 43px;
 }
 .content-top__link {
+  margin-left: auto;
   font-weight: 400;
   font-size: 25px;
   line-height: 60px;
   color: rgba(34, 34, 34, 0.5);
+}
+
+.content-middle {
+  margin-left: auto;
+  margin-right: 181px;
+  margin-bottom: 84px;
+  padding: 42px 71px;
+  max-width: 885px;
+  min-height: 345px;
+  background-color: #FFF;
+  border-radius: 25px;
+}
+.content-middle__text {
+  margin: 0;
+  padding: 0;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 49px;
+  color: #000;
+}
+
+.content-bottom {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  padding: 25px 170px 19px 60px;
+  background-color: rgba(40, 21, 55, 0.7);
+  border-radius: 25px 0 0 25px;
+  max-width: 1294px;
+  min-height: 147px;
+}
+
+.block-left__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.block-left__list-item {
+  margin-right: 61px;
+}
+.block-left__list-number {
+  margin: 0;
+  padding: 0;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin-bottom: 15px;
+  padding-left: 38px;
+  font-weight: 700;
+  font-size: 48px;
+  color: #FFF;
+}
+.block-left__list-text {
+  margin: 0;
+  padding: 0;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  font-weight: 400;
+  font-size: 24px;
+  color: #FFF;
+}
+
+.block-right {
+  display: flex;
+  flex-direction: column;
+}
+.block-right__top-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.block-right__bottom-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.block-right__top-list-item {
+  margin-bottom: 21px;
+}
+.block-right__top-list-item:not(:last-child) {
+  margin-right: 48px;
+}
+.block-right__bottom-list-item:not(:last-child) {
+  margin-right: 31px;
+}
+.block-right__link {
+  position: relative;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFF;
+}
+.block-right__link::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 115%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #D64BC0;
+  width: 100%;
+  height: 2px;
 }
 
 @media (max-width: 1214px) {
