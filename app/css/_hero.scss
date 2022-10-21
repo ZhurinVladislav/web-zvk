@@ -4,7 +4,7 @@
 .top-wrapper {
   position: relative;
   z-index: 0;
-  max-width: 1813px;
+  max-width: $containerMaxWidth;
   margin: 0 auto;
   margin-bottom: 56px;
 
@@ -12,44 +12,53 @@
     position: absolute;
     top: -100px;
     left: 50%;
-    z-index: -100;
+    z-index: -1000;
     max-width: 100%;
-    width: 1813px;
-    height: 100%;
+    width: $containerMaxWidth;
+    height: 40%;
     transform: translateX(-50%);
     overflow: hidden;
-    background-image: url(../img/hero/bg-hero.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: $colorGrayLight;
     border-radius: 0px 0px 25px 25px;
   }
 }
 
 .section-hero {
-  padding-top: 114px;
-  padding-bottom: 158px;
+  position: relative;
 
+    &__background {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1000;
+      max-width: 100%;
+      min-height: 100%;
+      background-color: $colorGrayLight;
+      // z-index: -3;
+      border-radius: 0px 0px 25px 25px;
+    }
+  
     &__container {
-      padding-left: 256px;
+      padding: 114px 0 45px 256px;
     }
 
     &__block-image {
       position: absolute;
-      top: -19.5%;
+      top: -24%;
       right: 0;
       bottom: 0;
       left: 0;
       z-index: -2;
       display: flex;
       align-items: center;
-      // min-height: 600px;
-      height: 100%;
+      height: 124%;
     }
 
     &__obj {
       position: relative;
-      // flex-shrink: 0;
+      flex-shrink: 0;
       width: 100%;
       height: 100%;
       background-position: center;
@@ -59,7 +68,6 @@
 
     
     &__obj-left {
-      // margin-right: 10px;
       border-bottom-left-radius: 25px;
       max-width: 158px;
       background-image: url(../img/hero/hero-obj-left.svg);
@@ -68,19 +76,19 @@
     &__obj-right {
       margin-left: auto;
       border-bottom-right-radius: 25px;
-      max-width: 930px;
+      max-width: 755px;
       background-image: url(../img/hero/hero-obj-right.svg);
     }
 
     &__heading-official {
-    position: absolute;
-    clip: rect(0, 0, 0, 0);
-    margin: -1px;
-    padding: 0;
-    border: 0;
-    width: 1px;
-    height: 1px;
-    // overflow: hidden;
+      position: absolute;
+      clip: rect(0, 0, 0, 0);
+      margin: -1px;
+      padding: 0;
+      border: 0;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
     }
 
     &__block-title {
@@ -124,7 +132,6 @@
     }
 
     &__list-item-link:focus:not(:active) {
-      // background-color: rgba(172, 0, 145, 0.50);
       color: $colorWhite;
       outline: none;
     }

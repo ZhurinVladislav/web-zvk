@@ -55,7 +55,7 @@ html {
 
 body {
   font-family: "UniSans", sans-serif, Arial, Helvetica;
-  background-color: white;
+  background-color: #FFF;
   width: 100%;
   max-width: 100%;
   min-width: 320px;
@@ -83,12 +83,7 @@ img {
 
 .container {
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 50px 0 50px;
   max-width: 1813px;
   border-radius: 25px;
-}
-
-.section-offset {
-  padding-right: 30px;
-  padding-left: 30px;
 }/*# sourceMappingURL=common.css.map */

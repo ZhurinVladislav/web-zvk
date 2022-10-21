@@ -1,5 +1,6 @@
 @import '_variables.scss';
 
+// clear style
 @mixin clearListStyles {
   margin: 0;
   padding: 0;
@@ -27,6 +28,7 @@
   cursor: pointer;
 }
 
+// animation style
 @mixin hoverLink {
   &:before {
     content: '';

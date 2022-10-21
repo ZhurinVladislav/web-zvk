@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const hamb = document.querySelector("#hamb");
+    const hamb = document.querySelector("#burger");
     const popup = document.querySelector("#popup");
     const body = document.body;
     

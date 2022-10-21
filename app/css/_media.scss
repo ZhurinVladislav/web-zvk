@@ -1,35 +1,30 @@
-// @media (max-width: 1839px) {
-//   .section-hero {
-//     &__obj-left {
-//       left: 79px;
-//     }
-
-//     &__obj-right {
-//       right: 0px;
-//     }
-//   }
-// }
-
 @media (max-width: 1214px) {
+  .container {
+    padding-right: 25px;
+    padding-left: 25px;
+    // padding: 0 25px 0 25px;
+  }
+
   .header {
     &__container {
-      padding-right: 0px;
-      padding-left: 0px;
+      padding: 24px 25px 24px 25px;
+      // padding: 114px 0 45px 256px;
     }
 
     &__list-item:not(:last-child) {
       margin-right: 35px;
     }
-  
   }
-  .container {
-    padding-right: 25px;
-    padding-left: 25px;
-  }
+
+
 }
 
 @media (max-width: 1024px) {
   .header {
+    &__container {
+      flex-direction: column;
+    }
+
     &__main-list {
       display: none;
     }
@@ -49,6 +44,14 @@
     &__list-svg {
       margin-left: 0;
     }
+
+    &__mobile {
+      width: 100%;
+    }
+
+    &__list-svg {
+      margin-left: auto;
+    }
   }
   
   .burger {
@@ -56,10 +59,17 @@
     margin: auto 0;
   }
 
+  .top-wrapper {
+    &__background {
+      top: -130px;
+    }
+  }
+
   .section-hero {
     padding-top: 40px;
       &__block-image {
-        top: -23%;
+        top: -30%;
+        height: 130%;
       }
 
       &__obj-right {
@@ -71,39 +81,39 @@
 
 @media (max-width: 718px) {
  .section-hero {
-    &__heading {
-      font-size: 26px;
-      line-height: 32px;
+    &__obj-left {
+      max-width: 183px;
     }
 
     &__text {
+      margin-bottom: 214px;
       margin-left: 0;
-      font-size: 25px;
     }
 
-    &__block-image {
-      top: -24%;
+    &__button {
+      display: flex;
+      margin: 0 auto;
     }
   }
 }
 
 @media (max-width: 600px) {
   .container {
-    padding-right: 25px;
-    padding-left: 25px;
+    padding: 9px 36px 17px 36px;
   }
   
   .header {
     &__list-svg-item:not(:last-child) {
-      margin-right: 10px;
+      margin-right: 0;
     }
 
     &__logo-svg {
-      height: 26px;
+      width: 80px;
+      height: 22px;
     }
 
     &__svg {
-    display: none;
+      display: none;
     }
 
     &__svg-mob {
@@ -111,23 +121,26 @@
     }
   }
 
-  // .section-hero {
-  //   &__heading {
-  //     font-size: 50px;
-  //   }
-  
-  //   &__text {
-  //     font-size: 26px;
-  //   }
-  // }
-
-}
-
-@media (max-width: 463px) {
-  .section-hero {
-    &__block-image {
-      top: -22%;
-    }
+  .top-wrapper {
+    margin-bottom: 32px;
   }
 
+  .section-hero {
+    &__obj-left {
+      max-width: 133px;
+    }
+
+    &__heading {
+      font-size: 23px;
+      line-height: 32px;
+    }
+
+    &__text {
+      font-size: 19px;
+    }
+
+    &__button {
+      padding: 12px 45px;
+    }
+  }
 }

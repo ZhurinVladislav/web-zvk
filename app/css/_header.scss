@@ -5,10 +5,7 @@
   &__container {
     position: relative;
     z-index: 2;
-    padding-top: 24px;
-    padding-right: 53px;
-    padding-bottom: 24px;
-    padding-left: 256px;
+    padding: 24px 53px 24px 256px;
     display: flex;
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 0 0 25px 25px;
@@ -25,16 +22,7 @@
     flex-wrap: wrap;
     @include clearListStyles;
   }
-
-  // &__list-item {
-  //   // transition: transform .3s ease-in-out;
-  //   // transition-timing-function: cubic-bezier(.65, 1.95, .03, .32);
-  // }
-
-  // &__list-item:hover {
-  //   transform: translateY(35%);
-  // }
-
+  
   &__list-item:not(:last-child) {
     margin-right: 87px;
   }
@@ -48,14 +36,13 @@
   }
 
   &__list-item-link {
+    @include hoverLink;
     @include focusLink;
     position: relative;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
     color: $colorWhite;
-    @include hoverLink;
-    
   }
 
   &__list-item-link:focus:not(:active)::after {
@@ -80,10 +67,13 @@
   &__list-item-link:not(:hover)::before {
     transition-duration: 0.0000001s;
   }
-  
 
   &__list-item-link:active {
     color: $colorGrayUltraLight;
+  }
+
+  &__list-item-link:active::before {
+    background-color: $colorWhite;
   }
 
   &__logo {
@@ -126,11 +116,15 @@
     fill: $colorPurpleLight;
   }
 
+  &__mobile {
+    display: flex;
+    margin-left: auto
+  }
+
   &__list-svg {
     @include clearListStyles;
     display: flex;
     align-items: center;
-    margin-left: auto;
   }
 
   &__svg-mob {
