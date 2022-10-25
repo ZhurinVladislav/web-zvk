@@ -38,5 +38,74 @@ document.addEventListener('DOMContentLoaded', function() {
       hamb.classList.remove("active");
       body.classList.remove("noscroll");
     }
+
+    // Swiper
+  const slider = new Swiper('.slider__slides-container', {
+    slidesPerGroup: 1,
+    slidesPerView: 3,
+    grid: {
+      rows: 1,
+      fill: "row"
+    },
+    spaceBetween: 50,
+    navigation: {
+      nextEl: ".slider__swiper-btn-next",
+      prevEl: ".slider__swiper-btn-prev"
+    },
+
+    breakpoints: {
+      320: {
+        slidesPerGroup: 1,
+        slidesPerView: 1,
+        spaceBetween: 50,
+      },
+
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 33.8,
+      },
+
+      1000: {
+        slidesPerView: 2,
+        spaceBetween: 50,
+      },
+
+      1415: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      }
+    },
+
+    a11y: false,
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true
+    },
+
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+    slideVisibleClass: "slide-visible",
+
+    on: {
+      init: function () {
+        this.slides.forEach((slide) => {
+          if (!slide.classList.contains("slide-visible")) {
+            slide.tabIndex = "-1";
+          } else {
+            slide.tabIndex = "";
+          }
+        });
+      },
+      slideChange: function () {
+        this.slides.forEach((slide) => {
+          if (!slide.classList.contains("slide-visible")) {
+            slide.tabIndex = "-1";
+          } else {
+            slide.tabIndex = "";
+          }
+        });
+      }
+    }
+  })
   })
   
