@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
       body.classList.remove("noscroll");
     }
 
-    // Swiper
+  // Swiper
   const slider = new Swiper('.slider__slides-container', {
     slidesPerGroup: 1,
     slidesPerView: 3,
@@ -54,25 +54,25 @@ document.addEventListener('DOMContentLoaded', function() {
     },
 
     breakpoints: {
-      320: {
+      0: {
         slidesPerGroup: 1,
         slidesPerView: 1,
-        spaceBetween: 50,
+        spaceBetween: 37,
       },
 
-      768: {
+      530: {
         slidesPerView: 2,
-        spaceBetween: 33.8,
+        spaceBetween: 37,
       },
 
       1000: {
-        slidesPerView: 2,
-        spaceBetween: 50,
+        slidesPerView: 3,
+        spaceBetween: 37,
       },
 
       1415: {
         slidesPerView: 3,
-        spaceBetween: 50,
+        spaceBetween: 37,
       }
     },
 
