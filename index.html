@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./app/css/style.css">
   <link rel="icon" type="image/x-icon" href="./app/img/svg/favicon.svg">
   <script src="./app/js/swiper.js" defer></script>
+  <script src="./app/js/modal.js" defer></script>
   <script src="./app/js/index.js" defer></script>
 </head>
 <body>
@@ -33,7 +34,7 @@
             </a>
           </li>
           <li class="header__list-item">
-            <a class="header__list-item-link" href="#reviews">
+            <a class="header__list-item-link" href="#">
               Отзывы
             </a>
           </li>
@@ -95,7 +96,6 @@
           </li>
         </ul>
       </div>
-
       <div class="header__popup" id="popup">
       </div>
     </div>
@@ -121,7 +121,7 @@
                 Frontend-разработчик
               </p>
             </div>
-            <a class="section-hero__button" aria-label="связаться со мной" href="#">
+            <a id="myBtn" class="section-hero__button" aria-label="связаться со мной" href="#">
               связаться со&nbsp;мной
             </a>
           </div>
@@ -129,7 +129,43 @@
       </section>
       <div class="top-wrapper__background"></div>
     </div>
-    <section class="about">
+    <article id="myModal" class="modal">
+      <div class="modal__content">
+        <span class="close">&times;</span>
+        <h3 class="modal__heading">
+          Форма обратной связи
+        </h3>
+          <form id="form" class="section-feedback__form" action="https://jsonplaceholder.typicode.com/posts/1" method="POST">
+            <ul>
+              <li>
+                <label>
+                  <input id="name" aria-label="Имя" type="text" name="text" placeholder="Имя*" data-validate-field="name" required>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input id="tel" aria-label="Телефон" type="tel" name="tel"  placeholder="Телефон" data-validate-field="tel" data-validate-rules="phone" required>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input id="email" aria-label="Электронная почта" type="email" name="email"  placeholder="Email" data-validate-field="email" data-validate-rules="email" required>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="ship" value="Согласен на обработку данных" >
+                  <span>Согласен на обработку данных</span>
+                </label>
+              </li>
+            </ul>
+            <button aria-label="Заказать обратный звонок">
+              Отправить
+            </button>
+          </form>
+        </div>
+    </article>
+    <section id="about" class="about">
       <div class="container about__container">
         <div class="about__block-image">
           <img class="about__obj about__obj-left" src="./app/img/about/about-left-image-1.png" alt="Владислав Журин">
@@ -185,7 +221,8 @@
         </div>
         <div class="about__content-middle content-middle">
           <p class="content-middle__text">
-            Еще раз привет! Итак, вы&nbsp;уже знаете, что меня зовут Владислав. Немного о&nbsp;себе: начинающий front-end разработчик, 22&nbsp;года, люблю IT-сферу с&nbsp;детства, живу в&nbsp;Новороссийске, Россия. Почему программирование? Все элементарно&nbsp;&mdash; мне это нравится, профессия будущего, благодаря которой я&nbsp;могу обеспечить себя и&nbsp;осуществить свою мечту&nbsp;&mdash; путешествовать, на&nbsp;данный момент я&nbsp;специализируюсь на&nbsp;front-end разработке. Почему вы&nbsp;должны выбрать меня <a class="content-middle__link" href="#">читать далее...</a><span class="content-middle__points">...</span>
+            Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Букв имени запятой вопрос семантика, рыбного осталось его пояс текста продолжил ее. От всех за запятой продолжил не предупреждал дорогу единственное.
+            Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты. Коварный всеми повстречался, проектах напоивший, текст над домах собрал ему океана языком дорогу, живет себя толку родного он лучше бросил <a class="content-middle__link" href="#">читать далее...</a><span class="content-middle__points">...</span>
           </p>
           <a class="content-middle__link-mobile" href="#">читать далее</a>
         </div>
@@ -262,7 +299,7 @@
         </div>
       </div>
     </section>
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
       <article class="portfolio__top top-block">
         <div class="container top-block__container">
           <div class="top-block__block-image">
@@ -379,7 +416,7 @@
         </div>
       </article>
     </section>
-    <section class="contacts">
+    <section id="contacts" class="contacts">
       <div class="container contacts__main-container">
         <h2 class="contacts__heading">
           Контакты

@@ -23,9 +23,9 @@
   }
 }
 
+
 .section-hero {
   position: relative;
-
     &__background {
       position: absolute;
       top: 0;
@@ -36,7 +36,6 @@
       max-width: 100%;
       min-height: 100%;
       background-color: $colorGrayLight;
-      // z-index: -3;
       border-radius: 0px 0px 25px 25px;
     }
   
@@ -46,14 +45,14 @@
 
     &__block-image {
       position: absolute;
-      top: -24%;
+      top: -25%;
       right: 0;
       bottom: 0;
       left: 0;
       z-index: -2;
       display: flex;
       align-items: center;
-      height: 124%;
+      height: 125%;
     }
 
     &__obj {
@@ -76,7 +75,7 @@
     &__obj-right {
       margin-left: auto;
       border-bottom-right-radius: 25px;
-      max-width: 755px;
+      max-width: 741px;
       background-image: url(../img/hero/hero-obj-right.svg);
     }
 
@@ -122,7 +121,7 @@
       max-width: 259px;
       min-height: 44px;
       font-weight: 400;
-      font-size: 20px;
+      font-size: 19px;
       line-height: 24px;
       color: $colorDark;
       border: solid 1px transparent;

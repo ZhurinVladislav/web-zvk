@@ -64,6 +64,7 @@ body {
 
 body.noscroll {
   position: fixed;
+  z-index: -1;
   overflow-y: scroll;
 }
 
@@ -86,6 +87,83 @@ img {
   padding: 0 50px 0 50px;
   max-width: 1813px;
   border-radius: 25px;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  display: none;
+  padding-top: 100px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #7E84A3;
+  margin: auto;
+  padding: 22px;
+  width: 70%;
+  height: 70%;
+  -webkit-animation-name: animatetop;
+          animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  border-radius: 25px;
+}
+.modal__heading {
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 32px;
+  color: #FFF;
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+.close {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  margin-right: auto;
+  font-weight: 300;
+  font-size: 63px;
+  line-height: 27px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 2px 16px;
 }
 
 .header__container {
@@ -366,14 +444,14 @@ img {
 }
 .section-hero__block-image {
   position: absolute;
-  top: -24%;
+  top: -25%;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: -2;
   display: flex;
   align-items: center;
-  height: 124%;
+  height: 125%;
 }
 .section-hero__obj {
   position: relative;
@@ -392,7 +470,7 @@ img {
 .section-hero__obj-right {
   margin-left: auto;
   border-bottom-right-radius: 25px;
-  max-width: 755px;
+  max-width: 741px;
   background-image: url(../img/hero/hero-obj-right.svg);
 }
 .section-hero__heading-official {
@@ -441,7 +519,7 @@ img {
   max-width: 259px;
   min-height: 44px;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 19px;
   line-height: 24px;
   color: #000;
   border: solid 1px transparent;
@@ -530,7 +608,6 @@ img {
 
 .content-top {
   position: relative;
-  z-index: 0;
   display: flex;
   margin-right: auto;
   margin-bottom: 46px;
@@ -540,7 +617,6 @@ img {
   border-radius: 0 25px 25px 0;
 }
 .content-top__image {
-  z-index: 10;
   margin-top: -6px;
   margin-right: 40px;
   margin-bottom: -37px;
@@ -580,7 +656,6 @@ img {
 
 .content-middle {
   position: relative;
-  z-index: 2;
   margin-left: auto;
   margin-right: 181px;
   margin-bottom: 84px;
@@ -619,7 +694,6 @@ img {
 
 .content-bottom {
   position: relative;
-  z-index: 2;
   display: flex;
   flex-direction: row;
   margin-left: auto;
@@ -700,7 +774,6 @@ img {
 .block-right__link::before {
   content: "";
   position: absolute;
-  z-index: 2;
   top: 115%;
   bottom: 0;
   right: 0;
@@ -1442,7 +1515,7 @@ img {
     display: none;
   }
   .top-block {
-    margin-bottom: 35px;
+    margin-bottom: 10px;
   }
   .top-block__container {
     padding: 36px 37px 0 37px;
@@ -1534,7 +1607,7 @@ img {
   .about__heading {
     margin-bottom: 30px;
     padding-right: 0;
-    font-size: 20px;
+    font-size: 24px;
     line-height: 19px;
   }
   .content-middle {
@@ -1620,7 +1693,7 @@ img {
 }
 @media (max-width: 600px) {
   .container {
-    padding: 9px 36px 17px 36px;
+    padding: 25px 36px 17px 36px;
   }
   .header__list-svg-item:not(:last-child) {
     margin-right: 0;
@@ -1648,29 +1721,29 @@ img {
     max-width: 133px;
   }
   .section-hero__heading {
-    font-size: 23px;
+    font-size: 25px;
     line-height: 32px;
   }
   .section-hero__text {
-    font-size: 19px;
+    font-size: 23px;
   }
   .section-hero__button {
-    padding: 12px 45px;
+    padding: 12px 49px;
   }
   .about__container {
     padding: 0;
   }
   .content-top {
-    margin-bottom: -17px;
+    margin-bottom: 16px;
     padding: 12px 12px 10px 88px;
     max-width: 330px;
   }
   .content-top__text {
-    font-size: 9px;
+    font-size: 13px;
     line-height: 24px;
   }
   .content-top__link {
-    font-size: 9px;
+    font-size: 13px;
     line-height: 24px;
   }
   .content-middle {
@@ -1701,6 +1774,9 @@ img {
   }
   .block-right__top-list-item:not(:last-child) {
     margin-right: 30px;
+  }
+  .mobile-block {
+    min-height: 115px;
   }
   .mobile-block__text {
     font-size: 10px;

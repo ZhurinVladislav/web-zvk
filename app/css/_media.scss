@@ -217,7 +217,7 @@
   }
 
   .top-block {
-    margin-bottom: 35px;
+    margin-bottom: 10px;
 
     &__container {
       padding: 36px 37px 0 37px;
@@ -318,7 +318,6 @@
 }
 
 @media (max-width: 718px) {
-
  .section-hero {
     &__container {
       padding: 37px 36px 45px 36px;
@@ -346,7 +345,7 @@
     &__heading {
       margin-bottom: 30px;
       padding-right: 0;
-      font-size: 20px;
+      font-size: 24px;
       line-height: 19px;
     }
   }
@@ -462,7 +461,7 @@
 
 @media (max-width: 600px) {
   .container {
-    padding: 9px 36px 17px 36px;
+    padding: 25px 36px 17px 36px;
   }
   
   .header {
@@ -490,7 +489,6 @@
 
   .section-hero {
     padding-top: 0;
-
     &__container {
       padding: 32px 36px 32px 36px;
     }
@@ -500,16 +498,16 @@
     }
 
     &__heading {
-      font-size: 23px;
+      font-size: 25px;
       line-height: 32px;
     }
 
     &__text {
-      font-size: 19px;
+      font-size: 23px;
     }
 
     &__button {
-      padding: 12px 45px;
+      padding: 12px 49px;
     }
   }
 
@@ -520,17 +518,17 @@
   }
 
   .content-top {
-    margin-bottom: -17px;
+    margin-bottom: 16px;
     padding: 12px 12px 10px 88px;
     max-width: 330px;
 
     &__text {
-      font-size: 9px;
+      font-size: 13px;
       line-height: 24px;
     }
 
     &__link {
-      font-size: 9px;
+      font-size: 13px;
       line-height: 24px;
     }
   }
@@ -576,6 +574,7 @@
   }
   
   .mobile-block {
+    min-height: 115px;
     &__text {
       font-size: 10px;
       line-height: 17px;
