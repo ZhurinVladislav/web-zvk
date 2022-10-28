@@ -13,23 +13,66 @@
   overflow: auto;
   background-color: rgba(0,0,0,0.4);
 
+  &__block-image {
+    position: absolute;
+    top: -25%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    height: 125%;
+  }
+
+  &__obj {
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  
+  &__obj-left {
+    border-bottom-left-radius: 10px;
+    max-width: 108px;
+    background-image: url(../img/modal/image-left.svg);
+  }
+
+  &__obj-right {
+    margin-left: auto;
+    border-bottom-right-radius: 10px;
+    max-width: 411px;
+    background-image: url(../img/modal/image-right.svg);
+  }
+
   &__content {
     position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: $colorGrayLight;
     margin: auto;
     padding: 22px;
-    width: 70%;
-    height: 70%;
+    // width: 70%;
+    // height: 70%;
+    width: 713px;
+    max-width: 100%;
+    min-height: 622px;
     animation-name: animatetop;
     animation-duration: 0.4s;
-    border-radius: 25px;
+    border-radius: 10px;
+    box-sizing: border-box;
   }
 
   &__heading {
     margin: 0 auto;
+    margin-bottom: 30px;
     font-weight: 400;
     font-size: 30px;
     line-height: 32px;
@@ -52,8 +95,10 @@
 .close {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
   color: white;
   margin-right: auto;
+  margin-bottom: 20px;
   font-weight: 300;
   font-size: 63px;
   line-height: 27px;
@@ -69,4 +114,157 @@
 
 .modal-body {
   padding: 2px 16px;
+}
+
+.input-reset {
+  padding: 10px 77px;
+  width: 100%;
+  max-width: 600px;
+  min-height: 50px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: solid 1px transparent;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  min-height: 360px;
+  width: 100%;
+
+  &__list {
+    @include clearListStyles;
+  }
+
+  &__list-item:not(:last-child) {
+    margin-bottom: 21px;
+  }
+
+  &__list-item:last-child {
+    margin-bottom: 28px;
+  }
+
+  &__label {
+    position: relative;
+  }
+
+  &__text {
+    padding: 9px 71px 15px 71px;
+    max-width: 600px;
+    min-height: 200px;
+    max-height: 200px;
+    width: 100%;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 18px;
+  }
+
+  &__text-image {
+    position: absolute;
+    top: -165px;
+    left: 18px;
+  }
+
+  &__select-item {
+  cursor: pointer;
+}
+
+  &__check-label {
+    color: $colorWhite;
+    cursor: pointer;
+  }
+
+  &__check-label:hover &__visible-checkbox {
+    border-color: $colorWhite;
+  }
+
+  &__check-label:hover &__check-text {
+    color: $colorWhite;
+  }
+
+  &__visually-hidden {
+    position: absolute;
+    z-index: 100;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  &__visible-checkbox {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    border: 1px solid $colorWhite;
+    width: 25px;
+    height: 25px;
+    transition: border-color .3s ease;
+  }
+
+  &__visible-checkbox::before {
+    content: "";
+    position: absolute;
+    top: 1%;
+    left: -37%;
+    transform: rotate(45deg);
+    width: 12px;
+    height: 16px;
+    margin-left: 60%; 
+    border-bottom: 1px solid $colorWhite;
+    border-right: 1px solid $colorWhite;
+    opacity: 0;
+    transition: opacity .3s ease;
+  }
+
+  &__checkbox:checked ~ &__visible-checkbox {
+    background-color: rgba(172, 0, 145, 0.11);
+  }
+
+  &__checkbox:checked ~ &__visible-checkbox::before {
+    opacity: 1;
+  }
+
+  &__checkbox:focus ~ &__visible-checkbox {
+    background-color: rgba(172, 0, 145, 0.11);
+  }
+
+  &__checkbox:focus ~ &__visible-checkbox::before {
+    border-bottom: 1px solid $colorWhite;
+    border-right: 1px solid $colorWhite;
+  }
+
+  &__check-text {
+    vertical-align: middle;
+    transition: color .3s ease;
+  }
+
+  &__checkbox:checked ~ &__check-text {
+    color: $colorWhite;
+  }
+
+  &__checkbox:focus ~ &__check-text {
+    color: $colorPurpleLight;
+  }
+
+  &__btn {
+    @include clearButtonStyles;
+    margin: 0 auto;
+    padding: 12px 79px;
+    color: $colorWhite;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: solid 1px transparent;
+    border-radius: 10px;
+  }
 }

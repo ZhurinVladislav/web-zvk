@@ -107,5 +107,5 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   })
-  })
+})
   

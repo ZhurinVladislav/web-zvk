@@ -338,6 +338,12 @@
     }
   }
 
+  .modal {
+    &__obj-right {
+      display: none;
+    }
+  }
+
   .about {
     padding-top: 38px;
     padding-bottom: 30px;
@@ -427,8 +433,6 @@
     }
   }
 
-
-
   .contacts {
     &__heading {
       margin-bottom: 14px;
@@ -508,6 +512,12 @@
 
     &__button {
       padding: 12px 49px;
+    }
+  }
+
+  .modal {
+    &__heading {
+      font-size: 25px;
     }
   }
 
