@@ -219,92 +219,34 @@
   }
 }
 
-// :root {
-//   /* basic color palette */
-//   --white-1: hsl(0, 0%, 100%);
-//   --white-2: hsl(0, 0%, 85%);
-//   --black-1: hsl(0, 0%, 0%);
-//   --blue-1:  hsl(200, 50%, 50%);
+.toggle-button {
+  @include clearButtonStyles;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 44px;
+  height: 24px;
+  background-color: $colorWhite;
+  border-radius: 50vw;
+  transition: transform .2s linear;
+  
+  &::before {
+    content:    '';
+    position: absolute;
+    left: 4px;
+    width: 20px;
+    height: 20px;
+    background-color: $colorGrayLight;
+    border-radius: 50%;
+    transition: transform .2s linear;
+  }
 
-//   /* spaces */
-//   --space-300: 1em;
-//   --space-400: 2em;
-// }
+  &_active {
+    background-color: #444;
 
-// .page {
-//   color:   var(--black-1);
-//   display: flex;
-//   background: {
-//     color: var(--white-1);
-//   };
-//   min: {
-//     height: 100vh;
-//   };
-//   place: {
-//     items: center;
-//   };
-  
-//   &__buttons {
-//     gap:     var(--space-300);
-//     display: flex;
-//   }
-// }
-
-// .toggle-button {
-//   --tn: all 200ms linear;
-  
-//   width:   var(--__toggle-button_wh, 80px);
-//   color:   var(--__toggle-button_cr, var(--white-1));
-//   display: flex;
-//   cursor:  pointer;
-//   border:  none;
-//   outline: none;
-//   align: {
-//     items: center;
-//   };
-//   aspect: {
-//     ratio: 2 / 1;
-//   };
-//   background: {
-//     color: var(--__toggle-button_bd-cr, var(--white-2));
-//   };
-  
-//   transition: var(--tn);
-//   position:   relative;
-//   &::before {
-//     --inset: 5px;
-    
-//     inset:      var(--inset);
-//     transition: var(--tn);
-//     width:      calc(50% - (var(--inset) * 2));
-//     position:   absolute;
-//     content:    '';
-//     aspect: {
-//       ratio: 1;
-//     };
-//     background: {
-//       color: var(--__toggle-button_cr, var(--white-1));
-//     };
-    
-//   }
-  
-//   &_rounded {
-//     border: {
-//       radius: 50vw;
-//     };
-    
-//     &::before {
-//       border: {
-//         radius: 50%;
-//       };
-//     }
-//   }
-  
-//   &_active {
-//     --__toggle-button_bd-cr: var(--blue-1);
-
-//     &::before {
-//       left: calc(50% + var(--inset));
-//     }
-//   }
-// }
+    &::before {
+      background-color: $colorDark;
+      transform: translateX(16px);
+    }
+  }
+}

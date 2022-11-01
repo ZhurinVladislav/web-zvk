@@ -487,6 +487,25 @@
     }
   }
 
+  .toggle-button {
+    
+    &::before {
+      background-image: url(../img/header/mob-header-svg.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 50%;
+    }
+  
+    &_active {
+      &::before {
+        background-image: url(../img/header/mob-header-svg-dk.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
+      }
+    }
+  }
+
   .top-wrapper {
     margin-bottom: 32px;
   }

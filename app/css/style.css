@@ -557,6 +557,39 @@ img {
   transform: translateY(-8px) rotate(-45deg);
 }
 
+.toggle-button {
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 44px;
+  height: 24px;
+  background-color: #FFF;
+  border-radius: 50vw;
+  transition: transform 0.2s linear;
+}
+.toggle-button::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  width: 20px;
+  height: 20px;
+  background-color: #7E84A3;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+.toggle-button_active {
+  background-color: #444;
+}
+.toggle-button_active::before {
+  background-color: #000;
+  transform: translateX(16px);
+}
+
 .burger {
   display: none;
   flex-direction: column;
@@ -1892,6 +1925,18 @@ img {
   }
   .header__svg-mob {
     display: block;
+  }
+  .toggle-button::before {
+    background-image: url(../img/header/mob-header-svg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+  }
+  .toggle-button_active::before {
+    background-image: url(../img/header/mob-header-svg-dk.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
   }
   .top-wrapper {
     margin-bottom: 32px;
