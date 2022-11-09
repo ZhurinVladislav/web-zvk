@@ -68,6 +68,12 @@ body.noscroll {
   overflow-y: scroll;
 }
 
+body.noscroll-map {
+  position: fixed;
+  z-index: -1;
+  overflow-y: scroll;
+}
+
 input {
   font-family: "UniSans", sans-serif, Arial, Helvetica;
 }

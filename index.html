@@ -11,6 +11,7 @@
   <link rel="icon" type="image/x-icon" href="./app/img/svg/favicon.svg">
   <script src="./app/js/swiper.js" defer></script>
   <script src="./app/js/modal.js" defer></script>
+  <script src="./app/js/map.js" defer></script>
   <script src="./app/js/index.js" defer></script>
 </head>
 <body>
@@ -461,9 +462,12 @@
               <p class="contacts__list-item-text contacts__text-reset">
                 Адрес
               </p>
-              <a class="contacts__list-item-link contacts__text-reset" href="https://yandex.ru/maps/970/novorossiysk/?ll=37.768974%2C44.723912&z=13" target="_blank">
+              <!-- <a id="btnMap" class="contacts__list-item-link contacts__text-reset" href="https://yandex.ru/maps/970/novorossiysk/?ll=37.768974%2C44.723912&z=13" target="_blank">
                 Краснодарский край, г. Новороссийск
-              </a>
+              </a> -->
+              <button id="btnMap" class="contacts__list-item-link contacts__text-reset">
+                Краснодарский край, г. Новороссийск
+              </button>
             </li>
             <li class="contacts__list-item">
               <p class="contacts__list-item-text contacts__text-reset">
@@ -493,6 +497,17 @@
         </article>
       </div>
     </section>
+    <article id="myMap" class="modal-map">
+      <div class="modal-map__content">
+        <span class="close-map">&times;</span>
+        <h3 class="modal-map__heading">
+          Форма обратной связи
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam labore vel, dolores fuga repudiandae iure, rerum est quisquam quam earum totam nisi eum ratione doloremque ex? Voluptatem debitis corrupti est?
+        </p>
+      </div>
+    </article>
   </main>
   <footer class="footer">
     <div class="container footer__container">

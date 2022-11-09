@@ -341,6 +341,64 @@ img {
   border-radius: 10px;
 }
 
+.modal-map {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  display: none;
+  padding-top: 100px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-map__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #7E84A3;
+  margin: auto;
+  padding: 22px;
+  width: 713px;
+  max-width: 100%;
+  min-height: 622px;
+  -webkit-animation-name: animatetop;
+          animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.modal-map__heading {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 32px;
+  color: #FFF;
+}
+
+.close {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  color: white;
+  margin-right: auto;
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 63px;
+  line-height: 27px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .header__container {
   position: relative;
   z-index: 2;
