@@ -111,7 +111,6 @@
   cursor: pointer;
 }
 
-
 .modal-body {
   padding: 2px 16px;
 }
@@ -282,48 +281,59 @@
   background-color: rgba(0,0,0,0.4);
 
   &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: $colorGrayLight;
+    position: relative;
     margin: auto;
-    padding: 22px;
     width: 713px;
     max-width: 100%;
     min-height: 622px;
+    // background-color: red;
     animation-name: animatetop;
     animation-duration: 0.4s;
-    border-radius: 10px;
     box-sizing: border-box;
   }
 
-  &__heading {
+  &__close {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 2;
+    color: $colorDark;
+    font-weight: 300;
+    font-size: 63px;
+    line-height: 27px;
+  }
+
+  &__close:hover,
+  &__close:focus {
+    color: $colorPurple;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &__main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__map {
     margin: 0 auto;
-    margin-bottom: 30px;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 32px;
-    color: $colorWhite;
+    padding: 0;
+    // width: 100%;
+    width: 700px;
+    height: 701px;
   }
 }
 
-.close {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  color: white;
-  margin-right: auto;
-  margin-bottom: 20px;
-  font-weight: 300;
-  font-size: 63px;
-  line-height: 27px;
+.section-map__container {
+  margin: 0 auto;
+  max-width: 100%;
 }
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+.ymaps-2-1-79-copyright {
+  display: none;
 }
 
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
