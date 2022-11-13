@@ -268,72 +268,72 @@
   }
 }
 
-.modal-map {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 10000;
-  display: none;
-  padding-top: 100px;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.4);
+// .modal-map {
+//   position: fixed;
+//   left: 0;
+//   top: 0;
+//   z-index: 10000;
+//   display: none;
+//   padding-top: 100px;
+//   width: 100%;
+//   height: 100%;
+//   overflow: auto;
+//   background-color: rgba(0,0,0,0.4);
 
-  &__content {
-    position: relative;
-    margin: auto;
-    width: 713px;
-    max-width: 100%;
-    min-height: 622px;
-    // background-color: red;
-    animation-name: animatetop;
-    animation-duration: 0.4s;
-    box-sizing: border-box;
-  }
+//   &__content {
+//     position: relative;
+//     margin: auto;
+//     width: 713px;
+//     max-width: 100%;
+//     min-height: 622px;
+//     // background-color: red;
+//     animation-name: animatetop;
+//     animation-duration: 0.4s;
+//     box-sizing: border-box;
+//   }
 
-  &__close {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    z-index: 2;
-    color: $colorDark;
-    font-weight: 300;
-    font-size: 63px;
-    line-height: 27px;
-  }
+//   &__close {
+//     position: absolute;
+//     top: 12px;
+//     left: 12px;
+//     z-index: 2;
+//     color: $colorDark;
+//     font-weight: 300;
+//     font-size: 63px;
+//     line-height: 27px;
+//   }
 
-  &__close:hover,
-  &__close:focus {
-    color: $colorPurple;
-    text-decoration: none;
-    cursor: pointer;
-  }
+//   &__close:hover,
+//   &__close:focus {
+//     color: $colorPurple;
+//     text-decoration: none;
+//     cursor: pointer;
+//   }
 
-  &__main {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
+//   &__main {
+//     position: relative;
+//     width: 100%;
+//     height: 100%;
+//   }
 
-  &__map {
-    margin: 0 auto;
-    padding: 0;
-    // width: 100%;
-    width: 700px;
-    height: 701px;
-  }
-}
+//   &__map {
+//     margin: 0 auto;
+//     padding: 0;
+//     // width: 100%;
+//     width: 700px;
+//     height: 701px;
+//   }
+// }
 
-.section-map__container {
-  margin: 0 auto;
-  max-width: 100%;
-}
+// .section-map__container {
+//   margin: 0 auto;
+//   max-width: 100%;
+// }
 
-.ymaps-2-1-79-copyright {
-  display: none;
-}
+// .ymaps-2-1-79-copyright {
+//   display: none;
+// }
 
-[class*="ground-pane"] {
-  filter: grayscale(1);
-}
+// [class*="ground-pane"] {
+//   filter: grayscale(1);
+// }

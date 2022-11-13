@@ -87,4 +87,8 @@ img {
   padding: 0 50px 0 50px;
   max-width: 1813px;
   border-radius: 25px;
+}
+
+.active {
+  display: inline;
 }/*# sourceMappingURL=common.css.map */

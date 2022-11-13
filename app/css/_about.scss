@@ -143,7 +143,8 @@
     color: $colorDark;
   }
 
-  &__link {
+  &__button {
+    @include clearButtonStyles;
     text-decoration: underline;
     color: $colorGrayUltraLightLink;
   }
@@ -153,9 +154,14 @@
   }
 
   &__link-mobile {
+    @include clearButtonStyles;
     margin-top: auto;
     margin-left: auto;
     color: $colorGrayUltraLightLink;
+    display: none;
+  }
+
+  &__text-addition {
     display: none;
   }
 }
