@@ -45,15 +45,22 @@
     color: $colorWhite;
   }
 
-  &__list-item-link:focus:not(:active)::after {
-    opacity: 1;
-    transform: translateY(140%);
+  // &__list-item-link:focus:not(:active)::after {
+  //   opacity: 1;
+  //   transform: translateY(140%);
+  //   outline: none;
+  // }
+
+  &__list-item-link:focus:not(:active) {
+    color: $colorGrayUltraLight;
+    opacity: 0.4;
     outline: none;
   }
 
-  &__list-item-link:not(:focus)::after {
-    transition-duration: 0.0000001s;
-  }
+  // &__list-item-link:not(:focus)::after {
+  //   transition-duration: 0.0000001s;
+  // }
+  
 
   &__list-item-link:focus {
     outline: none;

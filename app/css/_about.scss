@@ -149,8 +149,12 @@
     color: $colorGrayUltraLightLink;
   }
 
-  &__points {
-    display: none;
+  &__button-close {
+    @include clearButtonStyles;
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: underline;
+    color: $colorGrayUltraLightLink;
   }
 
   &__link-mobile {
@@ -162,6 +166,14 @@
   }
 
   &__text-addition {
+    display: none;
+  }
+
+  .active {
+    display: inline;
+  }
+
+  .disabled {
     display: none;
   }
 }
