@@ -429,6 +429,15 @@
     }
   }
 
+  .plug {
+    flex-wrap: wrap;
+    &__text {
+      margin-right: 0;
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+  }
+
   .contacts {
     &__heading {
       margin-bottom: 14px;

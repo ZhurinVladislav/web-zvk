@@ -1325,6 +1325,7 @@ img {
 
 .slider {
   position: relative;
+  display: none;
   padding: 35px 0;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -1444,6 +1445,31 @@ img {
   min-height: 300px;
 }
 
+.plug {
+  display: none;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+  padding: 35px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.plug__text {
+  font-family: "Radiotechnika";
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  margin-right: 60px;
+  font-size: 34px;
+  line-height: 48px;
+  font-weight: 700;
+}
+.plug__img {
+  max-width: 100px;
+  min-height: 100px;
+}
+
 .list-reset {
   margin: 0;
   padding: 0;
@@ -1499,6 +1525,14 @@ img {
   width: 2px;
   height: calc(100% + 10px);
   background-color: #D64BC0;
+}
+
+.active-tab {
+  display: flex;
+}
+
+.btn-active {
+  color: #D400B3;
 }
 
 .contacts__main-container {
@@ -1906,6 +1940,14 @@ img {
     align-items: center;
     justify-content: center;
     padding: 0;
+  }
+  .plug {
+    flex-wrap: wrap;
+  }
+  .plug__text {
+    margin-right: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
   }
   .contacts__heading {
     margin-bottom: 14px;

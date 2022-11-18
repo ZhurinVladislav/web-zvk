@@ -219,6 +219,7 @@
 
 .slider {
   position: relative;
+  display: none;
   padding: 35px 0;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -375,6 +376,31 @@
   }
 }
 
+.plug {
+  display: none;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+  padding: 35px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+
+  &__text {
+    @include titleReset;
+    margin-right: 60px;
+    // max-width: 500px;
+    font-size: 34px;
+    line-height: 48px;
+    font-weight: 700;
+  }
+
+  &__img {
+    max-width: 100px;
+    min-height: 100px;
+  }
+}
+
 .list-reset {
   @include clearListStyles;
   display: none;
@@ -425,4 +451,12 @@
     height: calc(100% + 10px);
     background-color: $colorPurpleLight;
   }
+}
+
+.active-tab {
+  display: flex;
+}
+
+.btn-active {
+  color: $colorPurpleМedium;
 }

@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
       renderPopup();
     }
     
-    // Здесь мы рендерим элементы в наш попап
+    // Здесь мы рендеtрим элементы в наш попап
     function renderPopup() {
       popup.appendChild(menu);
     }

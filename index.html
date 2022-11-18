@@ -12,6 +12,7 @@
   <script src="./app/js/swiper.js" defer></script>
   <script src="./app/js/modal.js" defer></script>
   <script src="./app/js/map.js" defer></script>
+  <script src="./app/js/tabs.js" defer></script>
   <script src="./app/js/index.js" defer></script>
 </head>
 <body>
@@ -364,39 +365,39 @@
           <div class="bottom-block__top-content">
             <ul class="bottom-block__list">
               <li class="bottom-block__list-item">
-                <button class="bottom-block__list-button">
+                <button data-path="one" class="btn-active btn-list bottom-block__list-button">
                   Все проекты
                 </button>
               </li>
               <li class="bottom-block__list-item">
-                <button class="bottom-block__list-button">
+                <button data-path="two" class="btn-list bottom-block__list-button">
                   HTML/CSS/JS
                 </button>
               </li>
               <li class="bottom-block__list-item">
-                <button class="bottom-block__list-button">
+                <button data-path="three" class="btn-list bottom-block__list-button">
                   Java Script
                 </button>
               </li>
               <li class="bottom-block__list-item">
-                <button class="bottom-block__list-button">
+                <button data-path="three" class="btn-list bottom-block__list-button">
                   React.js
                 </button>
               </li>
             </ul>
             <ul class="bottom-block__list-top-mob top-mob list-reset">
               <li class="top-mob__list-item item-reset">
-                <button class="top-mob__list-button btn-reset">
+                <button data-path="one" class="btn-list top-mob__list-button btn-reset">
                   Все проекты
                 </button>
               </li>
               <li class="top-mob__list-item item-reset">
-                <button class="top-mob__list-button btn-reset">
+                <button data-path="two" class="btn-list top-mob__list-button btn-reset">
                   HTML/CSS/JS
                 </button>
               </li>
             </ul>
-            <div class="bottom-block__slider slider">
+            <div data-target="one" class="active-tab bottom-block__slider slider projects">
               <div class="slider__swiper">
                 <div class="slider__navigation">
                   <button class="slider__swiper-btn slider__swiper-btn-prev" aria-label="К предыдущему слайду"></button>
@@ -420,14 +421,44 @@
                 </div>
               </div>
             </div>
+            <div data-target="two" class="bottom-block__slider slider projects">
+              <div class="slider__swiper">
+                <div class="slider__navigation">
+                  <button class="slider__swiper-btn slider__swiper-btn-prev" aria-label="К предыдущему слайду"></button>
+                  <button class="slider__swiper-btn slider__swiper-btn-next" aria-label="К следующему слайду"></button>
+                </div>
+                <div class="swiper-container slider__slides-container">
+                  <div class="swiper-wrapper">
+                    <a class="swiper-slide slider__slide" href="#">
+                      <img class="slider__slid-img slider__slid-one" src="./app/img/portfolio/gallery/gallery-1.jpg" alt="Проект Blanchard">
+                    </a>
+                    <a class="swiper-slide slider__slide" href="#">
+                      <img class="slider__slid-img slider__slid-two" src="./app/img/portfolio/gallery/gallery-2.jpg" alt="Проект Blanchard">
+                    </a>
+                    <a class="swiper-slide slider__slide" href="#">
+                      <img class="slider__slid-img slider__slid-three" src="./app/img/portfolio/gallery/gallery-3.jpg" alt="Проект Blanchard">
+                    </a>
+                    <a class="swiper-slide slider__slide" href="#">
+                      <img class="slider__slid-img slider__slid-four" src="./app/img/portfolio/gallery/gallery-4.jpg" alt="Проект Blanchard">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-target="three" class="bottom-block__plug plug projects">
+              <h3 class="plug__text">
+                Контент не подвезли
+              </h3>
+              <img class="plug__img" src="./app/img/svg/none-file.svg" alt="Проектов пока нет">
+            </div>
             <ul class="bottom-block__list-bot-mob bottom-mob list-reset">
               <li class="bottom-mob__list-item item-reset">
-                <button class="bottom-mob__list-button btn-reset">
+                <button data-path="three" class="btn-list bottom-mob__list-button btn-reset">
                   Java Script
                 </button>
               </li>
               <li class="bottom-mob__list-item item-reset">
-                <button class="bottom-mob__list-button btn-reset">
+                <button data-path="three" class="btn-list bottom-mob__list-button btn-reset">
                   React.js
                 </button>
               </li>
